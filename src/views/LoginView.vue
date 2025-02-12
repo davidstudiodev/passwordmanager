@@ -24,10 +24,14 @@ const email = ref('')
 const password = ref('')
 const router = useRouter()
 
+
+
 const loginUser = async() => {
     try {
         const auth = getAuth()
         const userValidate = await signInWithEmailAndPassword(auth, email.value, password.value)
+
+        console.log("Usuario autenticado:", auth.currentUser);
 
         const user = userValidate.user
         router.push({name:'passwords'})
