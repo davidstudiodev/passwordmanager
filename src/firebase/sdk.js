@@ -4,7 +4,7 @@ import { getFirestore } from "firebase/firestore"
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBR3MosZlcPUgo2w5Eqf0tEh78BwUwvlpI",
+    apiKey: import.meta.env.FIREBASE_API_KEY,
     authDomain: "password-manager-87cea.firebaseapp.com",
     projectId: "password-manager-87cea",
     storageBucket: "password-manager-87cea.firebasestorage.app",
